@@ -1,6 +1,7 @@
 import { Stack } from "expo-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useReactQueryDevTools } from "@dev-plugins/react-query";
+import CartButton from "@/components/CartButton";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -18,7 +19,11 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen
           name="index"
-          options={{ title: "Galatic products", headerShadowVisible: false }}
+          options={{
+            title: "Galatic products",
+            headerShadowVisible: false,
+            headerRight: () => <CartButton />,
+          }}
         />
         <Stack.Screen
           name="product/[id]"

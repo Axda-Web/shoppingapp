@@ -14,10 +14,12 @@ import { Image } from "expo-image";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { COLORS } from "@/utils/colors";
+import useCartStore from "@/store/cartStore";
 
 const Page = () => {
   const { id } = useLocalSearchParams();
   const { bottom } = useSafeAreaInsets();
+  const { addProduct } = useCartStore();
 
   const { data: product, isLoading } = useQuery({
     queryKey: ["product", id],
@@ -44,7 +46,7 @@ const Page = () => {
 
   const handleAddToCart = () => {
     console.log("add to cart");
-    // addProduct(product);
+    addProduct(product);
   };
 
   return (
