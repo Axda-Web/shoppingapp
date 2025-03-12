@@ -63,7 +63,33 @@ export default function Index() {
           },
         }}
       />
-      <View style={styles.categoryContainer}></View>
+      <View style={styles.categoryContainer}>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.categoryScrollView}
+        >
+          {allCategories.map((category) => (
+            <Pressable
+              key={category}
+              style={[
+                styles.categoryButton,
+                selectedCategory === category && styles.selectedCategory,
+              ]}
+              onPress={() => setSelectedCategory(category)}
+            >
+              <Text
+                style={[
+                  styles.categoryButtonText,
+                  selectedCategory === category && styles.selectedCategoryText,
+                ]}
+              >
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </Text>
+            </Pressable>
+          ))}
+        </ScrollView>
+      </View>
       <FlashList
         data={filteredProducts}
         renderItem={renderProduct}
