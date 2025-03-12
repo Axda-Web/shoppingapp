@@ -20,6 +20,13 @@ export default function RootLayout() {
           name="index"
           options={{ title: "Galatic products", headerShadowVisible: false }}
         />
+        <Stack.Screen
+          name="product/[id]"
+          options={{
+            title: "",
+            headerBackTitle: "Products",
+          }}
+        />
       </Stack>
     </QueryClientProvider>
   );

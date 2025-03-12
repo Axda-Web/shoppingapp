@@ -42,6 +42,11 @@ const Page = () => {
     }
   };
 
+  const handleAddToCart = () => {
+    console.log("add to cart");
+    // addProduct(product);
+  };
+
   return (
     <View style={styles.container}>
       <Stack.Screen
@@ -73,6 +78,16 @@ const Page = () => {
           </View>
         </View>
       </ScrollView>
+      <TouchableOpacity
+        style={[
+          styles.addToCartButton,
+          { paddingBottom: Platform.OS === "ios" ? bottom : 20 },
+        ]}
+        onPress={handleAddToCart}
+      >
+        <Ionicons name="cart" size={20} color="white" />
+        <Text style={styles.addToCartText}>Add to Cart</Text>
+      </TouchableOpacity>
     </View>
   );
 };
