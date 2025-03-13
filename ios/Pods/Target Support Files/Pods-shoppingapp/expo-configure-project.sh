@@ -48,4 +48,4 @@ with_node \
   --target "/Users/axda/Desktop/projects/mobile/galaxies.dev/zero-to-hero/shoppingapp/ios/Pods/Target Support Files/Pods-shoppingapp/ExpoModulesProvider.swift" \
   --entitlement "/Users/axda/Desktop/projects/mobile/galaxies.dev/zero-to-hero/shoppingapp/ios/shoppingapp/shoppingapp.entitlements" \
   --platform "apple" \
-  --packages "expo" "expo-asset" "expo-blur" "expo-constants" "expo-file-system" "expo-font" "expo-haptics" "expo-keep-awake" "expo-linking" "expo-router" "expo-splash-screen" "expo-symbols" "expo-system-ui" "expo-web-browser"
+  --packages "expo" "expo-asset" "expo-blur" "expo-constants" "expo-dev-launcher" "expo-dev-menu" "expo-file-system" "expo-font" "expo-haptics" "expo-image" "expo-keep-awake" "expo-linear-gradient" "expo-linking" "expo-router" "expo-splash-screen" "expo-symbols" "expo-system-ui" "expo-web-browser"

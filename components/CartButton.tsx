@@ -6,7 +6,18 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 const CartButton = () => {
   const { count } = useCartStore();
-  return <Text>{count}</Text>;
+  return (
+    <Link href="/cart" asChild>
+      <TouchableOpacity>
+        {count > 0 && (
+          <View style={styles.countContainer}>
+            <Text style={styles.countText}>{count}</Text>
+          </View>
+        )}
+        <Ionicons name="cart" size={28} color="black" />
+      </TouchableOpacity>
+    </Link>
+  );
 };
 
 export default CartButton;
